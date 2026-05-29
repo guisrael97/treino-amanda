@@ -153,20 +153,7 @@ const RULE_TEXT = 'Progressão dupla: se bater 12 reps em todas as séries com b
 
 const D = {
   seg:{
-    label:'Segunda',short:'Seg',type:'Treino 1 - Quadríceps + Glúteo + Abdômen',color:'amber',muscles:'Quadríceps · Glúteos · Abdômen',
-    info:'Foco em quadríceps com glúteo como complemento. A prioridade é técnica, amplitude segura e progressão de carga sem pressa.',
-    exercises:[
-      {id:'t1_legpress',name:'Leg Press',mus:'Quadríceps/Glúteo',sets:3,r1:6,r2:12,rest1:90,rest2:120,note:'Pés em posição média. Descer com controle, sem tirar o quadril do banco.'},
-      {id:'t1_agachamento',name:'Agachamento Livre',mus:'Quadríceps/Glúteo',sets:3,r1:6,r2:12,rest1:90,rest2:120,note:'Começar com carga conservadora, priorizar técnica, amplitude segura e controle do movimento. Não buscar falha nas primeiras semanas.'},
-      {id:'t1_afundo',name:'Afundo ou Búlgaro',mus:'Quadríceps/Glúteo',sets:2,r1:6,r2:12,rest1:90,rest2:90,note:'6-12 reps por perna. Começar leve. Se o búlgaro ficar muito instável, usar afundo ou passada.'},
-      {id:'t1_extensora',name:'Cadeira Extensora',mus:'Quadríceps',sets:3,r1:6,r2:12,rest1:60,rest2:90,note:'Segurar 1 segundo no topo e controlar a descida.'},
-      {id:'t1_abdutora',name:'Cadeira Abdutora',mus:'Glúteo médio',sets:3,r1:6,r2:12,rest1:45,rest2:75,note:'Não jogar o tronco. Fazer com controle.'},
-      {id:'t1_pelvica',name:'Elevação Pélvica',mus:'Glúteo',sets:3,r1:6,r2:12,rest1:90,rest2:120,note:'Pausar 1 segundo no topo contraindo glúteo.'},
-      {id:'t1_abs',name:'Abdômen',mus:'Abdômen',sets:3,r1:6,r2:12,rest1:45,rest2:60,note:'Pode ser crunch máquina, crunch na polia ou abdominal na máquina.'}
-    ]
-  },
-  ter:{
-    label:'Terça',short:'Ter',type:'Treino 2 - Costas + Ombro + Bíceps',color:'blue',muscles:'Costas · Ombros · Bíceps',
+    label:'Segunda',short:'Seg',type:'Treino 2 - Costas + Ombro + Bíceps',color:'blue',muscles:'Costas · Ombros · Bíceps',
     info:'Foco em costas e ombros para construir postura, largura e equilíbrio na parte superior. Bíceps entra como complemento.',
     exercises:[
       {id:'t2_puxada',name:'Puxada Frontal',mus:'Dorsais',sets:3,r1:6,r2:12,rest1:90,rest2:90,note:'Puxar com os cotovelos, sem jogar o corpo para trás.'},
@@ -178,27 +165,21 @@ const D = {
       {id:'t2_rosca_martelo',name:'Rosca Martelo',mus:'Bíceps/Braquial',sets:2,r1:6,r2:12,rest1:60,rest2:60,note:'Controlar a descida.'}
     ]
   },
-  qua:{
-    label:'Quarta',short:'Qua',type:'Descanso ou cardio leve',color:'blue',muscles:'Recuperação',
-    info:'Dia para recuperação. Se quiser fazer cardio, usar caminhada leve, bike ou elíptico por 20 a 30 minutos em intensidade confortável.',
-    exercises:[],
-    recovery:{label:'Descanso ou cardio leve',details:[['Opção','Caminhada leve, bike ou elíptico.'],['Duração','20 a 30 minutos.'],['Intensidade','Confortável, sem transformar em treino intenso.']]}
-  },
-  qui:{
-    label:'Quinta',short:'Qui',type:'Treino 3 - Posterior + Glúteo + Abdômen',color:'amber',muscles:'Posterior · Glúteos · Abdômen',
-    info:'Foco em posterior de coxa e glúteos. O stiff entra como principal exercício de hinge do dia, mas deve ser feito com carga controlada, técnica limpa e sem buscar falha nas primeiras semanas.',
+  ter:{
+    label:'Terça',short:'Ter',type:'Treino 1 - Quadríceps + Glúteo + Abdômen',color:'amber',muscles:'Quadríceps · Glúteos · Abdômen',
+    info:'Foco em quadríceps com glúteo como complemento. A prioridade é técnica, amplitude segura e progressão de carga sem pressa.',
     exercises:[
-      {id:'t3_hiper',name:'Stiff com Halteres ou Barra',mus:'Posterior/Glúteo',sets:3,r1:6,r2:12,rest1:90,rest2:120,note:'Começar leve, manter coluna neutra, quadril indo para trás e descida controlada. Não buscar amplitude maior do que a mobilidade permite. Se sentir lombar ou desconforto, reduzir carga e amplitude.'},
-      {id:'t3_flexora',name:'Mesa Flexora ou Cadeira Flexora',mus:'Posterior',sets:3,r1:6,r2:12,rest1:60,rest2:90,note:'Controlar a volta e evitar impulso.'},
-      {id:'t3_pelvica',name:'Elevação Pélvica',mus:'Glúteo',sets:3,r1:6,r2:12,rest1:90,rest2:120,note:'Principal exercício de glúteo do dia. Pausar 1 segundo no topo.'},
-      {id:'t3_sumo_leg',name:'Agachamento Sumô ou Leg Press Pés Altos',mus:'Glúteo/Posterior',sets:3,r1:6,r2:12,rest1:90,rest2:90,note:'Escolher uma opção. Não precisa fazer as duas no mesmo dia.'},
-      {id:'t3_cabo',name:'Glúteo no Cabo',mus:'Glúteo',sets:3,r1:6,r2:12,rest1:60,rest2:60,note:'6-12 reps cada perna. Não roubar com lombar. Movimento controlado.'},
-      {id:'t3_abdutora',name:'Cadeira Abdutora',mus:'Glúteo médio',sets:2,r1:6,r2:12,rest1:45,rest2:60,note:'Volume menor porque já foi usada no Treino 1.'},
-      {id:'t3_abs',name:'Abdômen',mus:'Abdômen',sets:3,r1:6,r2:12,rest1:45,rest2:60,note:'Pode alternar com o exercício usado no Treino 1.'}
+      {id:'t1_legpress',name:'Leg Press',mus:'Quadríceps/Glúteo',sets:3,r1:6,r2:12,rest1:90,rest2:120,note:'Pés em posição média. Descer com controle, sem tirar o quadril do banco.'},
+      {id:'t1_agachamento',name:'Agachamento Livre',mus:'Quadríceps/Glúteo',sets:3,r1:6,r2:12,rest1:90,rest2:120,note:'Começar com carga conservadora, priorizar técnica, amplitude segura e controle do movimento. Não buscar falha nas primeiras semanas.'},
+      {id:'t1_afundo',name:'Afundo ou Búlgaro',mus:'Quadríceps/Glúteo',sets:2,r1:6,r2:12,rest1:90,rest2:90,note:'6-12 reps por perna. Começar leve. Se o búlgaro ficar muito instável, usar afundo ou passada.'},
+      {id:'t1_extensora',name:'Cadeira Extensora',mus:'Quadríceps',sets:3,r1:6,r2:12,rest1:60,rest2:90,note:'Segurar 1 segundo no topo e controlar a descida.'},
+      {id:'t1_abdutora',name:'Cadeira Abdutora',mus:'Glúteo médio',sets:3,r1:6,r2:12,rest1:45,rest2:75,note:'Não jogar o tronco. Fazer com controle.'},
+      {id:'t1_pelvica',name:'Elevação Pélvica',mus:'Glúteo',sets:3,r1:6,r2:12,rest1:90,rest2:120,note:'Pausar 1 segundo no topo contraindo glúteo.'},
+      {id:'t1_abs',name:'Abdômen',mus:'Abdômen',sets:3,r1:6,r2:12,rest1:45,rest2:60,note:'Pode ser crunch máquina, crunch na polia ou abdominal na máquina.'}
     ]
   },
-  sex:{
-    label:'Sexta',short:'Sex',type:'Treino 4 - Costas + Ombro + Tríceps + Peito mínimo',color:'green',muscles:'Costas · Ombros · Tríceps · Peito',
+  qua:{
+    label:'Quarta',short:'Qua',type:'Treino 4 - Costas + Ombro + Tríceps + Peito mínimo',color:'green',muscles:'Costas · Ombros · Tríceps · Peito',
     info:'Parte superior com foco em costas, ombros e tríceps. Peito entra apenas como manutenção para equilíbrio muscular e saúde do ombro.',
     exercises:[
       {id:'t4_remada_maq',name:'Remada Máquina',mus:'Costas',sets:3,r1:6,r2:12,rest1:90,rest2:90,note:'Tronco firme, puxada controlada e sem impulso.'},
@@ -210,9 +191,28 @@ const D = {
       {id:'t4_triceps_frances',name:'Tríceps Francês na Corda',mus:'Tríceps',sets:2,r1:6,r2:12,rest1:60,rest2:60,note:'Controlar amplitude e não forçar cotovelo.'}
     ]
   },
+  qui:{
+    label:'Quinta',short:'Qui',type:'Descanso',color:'blue',muscles:'Recuperação',
+    info:'Dia de descanso para recuperar dos dois primeiros treinos da semana e chegar melhor ao treino de inferiores de sexta.',
+    exercises:[],
+    recovery:{label:'Descanso',details:[['Prioridade','Recuperar dos treinos de segunda, terça e quarta.'],['Objetivo','Chegar melhor ao treino de inferiores de sexta.'],['Esforço','Manter o dia leve.']]}
+  },
+  sex:{
+    label:'Sexta',short:'Sex',type:'Treino 3 - Posterior + Glúteo + Abdômen',color:'amber',muscles:'Posterior · Glúteos · Abdômen',
+    info:'Foco em posterior de coxa e glúteos. O stiff entra como principal exercício de hinge do dia, mas deve ser feito com carga controlada, técnica limpa e sem buscar falha nas primeiras semanas.',
+    exercises:[
+      {id:'t3_hiper',name:'Stiff com Halteres ou Barra',mus:'Posterior/Glúteo',sets:3,r1:6,r2:12,rest1:90,rest2:120,note:'Começar leve, manter coluna neutra, quadril indo para trás e descida controlada. Não buscar amplitude maior do que a mobilidade permite. Se sentir lombar ou desconforto, reduzir carga e amplitude.'},
+      {id:'t3_flexora',name:'Mesa Flexora ou Cadeira Flexora',mus:'Posterior',sets:3,r1:6,r2:12,rest1:60,rest2:90,note:'Controlar a volta e evitar impulso.'},
+      {id:'t3_pelvica',name:'Elevação Pélvica',mus:'Glúteo',sets:3,r1:6,r2:12,rest1:90,rest2:120,note:'Principal exercício de glúteo do dia. Pausar 1 segundo no topo.'},
+      {id:'t3_sumo_leg',name:'Agachamento Sumô ou Leg Press Pés Altos',mus:'Glúteo/Posterior',sets:3,r1:6,r2:12,rest1:90,rest2:90,note:'Escolher uma opção. Não precisa fazer as duas no mesmo dia.'},
+      {id:'t3_cabo',name:'Glúteo no Cabo',mus:'Glúteo',sets:3,r1:6,r2:12,rest1:60,rest2:60,note:'6-12 reps cada perna. Não roubar com lombar. Movimento controlado.'},
+      {id:'t3_abdutora',name:'Cadeira Abdutora',mus:'Glúteo médio',sets:2,r1:6,r2:12,rest1:45,rest2:60,note:'Volume menor porque já foi usada no Treino 1.'},
+      {id:'t3_abs',name:'Abdômen',mus:'Abdômen',sets:3,r1:6,r2:12,rest1:45,rest2:60,note:'Pode alternar com o exercício usado no Treino 1.'}
+    ]
+  },
   sab:{
-    label:'Sábado',short:'Sáb',type:'Cardio leve opcional ou descanso',color:'blue',muscles:'Recuperação',
-    info:'Opcional. Usar apenas se a recuperação estiver boa. Caminhada, bike ou elíptico de 20 a 30 minutos. Não transformar em treino intenso.',
+    label:'Sábado',short:'Sáb',type:'Cardio leve opcional ou descanso',color:'blue',muscles:'Recuperação ativa',
+    info:'Opcional. Usar apenas se a recuperação estiver boa. Caminhada, bike ou elíptico de 20 a 30 minutos em intensidade confortável. Não transformar em treino intenso.',
     exercises:[],
     recovery:{label:'Cardio leve opcional ou descanso',details:[['Opção','Caminhada leve, bike ou elíptico.'],['Duração','20 a 30 minutos.'],['Regra','Usar apenas se a recuperação estiver boa.']]}
   },
